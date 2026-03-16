@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, ImageOff } from "lucide-react";
+import { ImageOff } from "lucide-react";
 
 // ─────────────────────────────────────────────────────────────
 // HOW TO ADD PHOTOS:
@@ -69,8 +69,6 @@ function ProjectCard({ project, index }) {
   const [current, setCurrent] = useState(0);
   const total = project.items.length;
 
-  const prev = () => setCurrent((c) => (c - 1 + total) % total);
-  const next = () => setCurrent((c) => (c + 1) % total);
 
   return (
     <motion.div
@@ -99,13 +97,6 @@ function ProjectCard({ project, index }) {
           </motion.div>
         </AnimatePresence>
 
-        {/* Arrows */}
-        <button onClick={prev} className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full w-8 h-8 flex items-center justify-center transition z-10">
-          <ChevronLeft size={18} />
-        </button>
-        <button onClick={next} className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full w-8 h-8 flex items-center justify-center transition z-10">
-          <ChevronRight size={18} />
-        </button>
 
         {/* Dots */}
         <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
@@ -116,10 +107,6 @@ function ProjectCard({ project, index }) {
           ))}
         </div>
 
-        {/* Count */}
-        <span className="absolute top-2 right-2 bg-black/50 text-white text-xs px-2 py-0.5 rounded-full z-10">
-          {current + 1} / {total}
-        </span>
       </div>
 
       {/* Info — category label + current project name */}
