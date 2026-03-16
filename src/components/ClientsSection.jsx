@@ -1,30 +1,49 @@
+import { motion } from "framer-motion";
 import client1 from "../assets/clients/client1.png";
 import client2 from "../assets/clients/client2.png";
-// import client3 from "../assets/clients/client3.png";
-// import client4 from "../assets/clients/client4.png";
+
+const clients = [client1, client2, client1, client2]; // duplicate for marquee effect
 
 export default function ClientsSection() {
   return (
-    <section className="py-20 bg-gray-100">
-
-      <div className="max-w-6xl mx-auto px-6 text-center">
-
-        <h2 className="text-3xl font-bold mb-10">
+    <section className="py-20 bg-gray-50 overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6 text-center mb-12">
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-yellow-600 font-semibold tracking-widest text-sm uppercase mb-2"
+        >
+          Partners & Clients
+        </motion.p>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+          className="text-3xl font-bold"
+        >
           Trusted By Our Clients
-        </h2>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-
-          <img src={client1} alt="Client 1" className="mx-auto h-16 opacity-70 hover:opacity-100"/>
-          <img src={client2} alt="Client 2" className="mx-auto h-16 opacity-70 hover:opacity-100"/>
-          {/* 
-          <img src={client3} alt="Client 3" className="mx-auto h-16 opacity-70 hover:opacity-100"/>
-          <img src={client4} alt="Client 4" className="mx-auto h-16 opacity-70 hover:opacity-100"/> */}
-
-        </div>
-
+        </motion.h2>
       </div>
 
+      {/* Scrolling marquee */}
+      <div className="relative flex overflow-hidden">
+        <motion.div
+          className="flex gap-16 items-center"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+        >
+          {[...clients, ...clients].map((src, i) => (
+            <img
+              key={i}
+              src={src}
+              alt={`Client ${i + 1}`}
+              className="h-16 w-auto opacity-60 hover:opacity-100 transition-all duration-300 shrink-0"
+            />
+          ))}
+        </motion.div>
+      </div>
     </section>
   );
 }
