@@ -48,19 +48,25 @@ export default function AwardsSection() {
               <div className="bg-yellow-100 p-3 rounded-full">
                 <Award size={28} className="text-yellow-600" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-800">Global Excellence Award</h3>
+              <h3 className="text-2xl font-bold text-gray-800">Global Excellence Award 2019</h3>
+            </div>
+
+            {/* Award Category */}
+            <div className="inline-flex items-center gap-2 mb-5">
+              <Star size={14} className="text-yellow-500 fill-yellow-500" />
+              <span className="text-yellow-700 font-semibold text-sm">Entrepreneur of the Year — Real Estate</span>
             </div>
 
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Saikrupa Developers was honoured at the <strong>Global Excellence Awards</strong>{" "}
-              organised by Brand Empower Pvt. Ltd. for outstanding performance and excellence in
-              the real estate sector.
+              Saikrupa Group of Industries was honoured at the <strong>Global Excellence Awards</strong>{" "}
+              organised by <strong>Brand Empower Pvt. Ltd.</strong> for remarkable achievements and
+              excellence in the real estate sector.
             </p>
 
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              The prestigious ceremony was held at <strong>Grand Hyatt Hotel, Mumbai</strong>{" "}
-              on 12th October 2019 in the presence of chief guest{" "}
-              <strong>Madhuri Dixit Nene</strong>.
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              The prestigious ceremony was held in <strong>Mumbai, 2019</strong> in the presence of
+              chief guest <strong>Mrs. Madhuri Dixit Nene</strong>. The award was received by{" "}
+              <strong>Mr. Sudam Bhore</strong> on behalf of the group.
             </p>
 
             {/* Stars */}
@@ -78,9 +84,20 @@ export default function AwardsSection() {
               ))}
             </div>
 
-            <blockquote className="border-l-4 border-yellow-500 pl-4 text-gray-500 italic text-sm">
+            <blockquote className="border-l-4 border-yellow-500 pl-4 text-gray-500 italic text-sm mb-6">
               "A testament to our commitment to quality, trust, and excellence in every project we deliver."
             </blockquote>
+
+            {/* Verification Link */}
+            <a
+              href="https://www.brandempower.org/gea-2019-winners/saikrupa-group-of-industries-234.htm"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-yellow-700 font-medium border border-yellow-400 rounded-lg px-4 py-2 hover:bg-yellow-50 transition"
+            >
+              <Award size={15} />
+              Verify Award — Brand Empower Official Site
+            </a>
           </motion.div>
 
         </div>
