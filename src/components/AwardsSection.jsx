@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import awardImage from "../assets/award.png";
+import awardImage from "../assets/award.webp";
 import { Star, Award } from "lucide-react";
 
 export default function AwardsSection() {
@@ -33,6 +33,7 @@ export default function AwardsSection() {
             <img
               src={awardImage}
               alt="Global Excellence Award"
+              loading="lazy"
               className="relative z-10 rounded-2xl shadow-2xl w-full object-cover"
             />
           </motion.div>

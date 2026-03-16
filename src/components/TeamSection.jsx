@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import ceo from "../assets/ceo.jpg";
-import vishal from "../assets/vishal.png";
+import ceo from "../assets/ceo.webp";
+import vishal from "../assets/vishal.webp";
 import gulab from "../assets/gulab.jpg";
 import jaganath from "../assets/jaganath.jpg";
 import prajakta from "../assets/prajakta.jpg";
@@ -73,6 +73,7 @@ export default function TeamSection() {
                 <img
                   src={member.image}
                   alt={member.name}
+                  loading="lazy"
                   className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
                 />
               </div>

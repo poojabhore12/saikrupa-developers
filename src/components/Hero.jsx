@@ -1,4 +1,4 @@
-import heroImage from "../assets/hero.png";
+import heroImage from "../assets/hero.webp";
 import { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";

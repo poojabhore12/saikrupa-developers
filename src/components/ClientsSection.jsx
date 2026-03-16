@@ -39,6 +39,7 @@ export default function ClientsSection() {
               key={i}
               src={src}
               alt={`Client ${i + 1}`}
+              loading="lazy"
               className="h-16 w-auto opacity-60 hover:opacity-100 transition-all duration-300 shrink-0"
             />
           ))}

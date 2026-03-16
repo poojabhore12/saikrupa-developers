@@ -1,4 +1,4 @@
-import ceoImage from "../assets/ceo.jpg";
+import ceoImage from "../assets/ceo.webp";
 
 export default function CEOSection() {
   return (
@@ -8,6 +8,7 @@ export default function CEOSection() {
         <img
           src={ceoImage}
           alt="Sudam Bhore CEO"
+          loading="lazy"
           className="rounded-xl shadow-lg"
         />
 
