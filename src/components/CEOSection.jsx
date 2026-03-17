@@ -3,7 +3,7 @@ import ceoImage from "../assets/ceo.webp";
 export default function CEOSection() {
   return (
     <section className="bg-gray-100 py-20">
-      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-6xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-6 md:gap-12 items-center">
 
         <img
           src={ceoImage}
@@ -14,11 +14,11 @@ export default function CEOSection() {
 
         <div>
 
-          <h2 className="text-3xl font-bold mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">
             Sudam Pandurang Bhore
           </h2>
 
-          <p className="text-yellow-600 font-semibold mb-4">
+          <p className="text-[#cc6100] font-semibold mb-4">
             CEO – Saikrupa Developers
           </p>
 

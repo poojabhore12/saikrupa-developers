@@ -10,7 +10,7 @@ export default function MapSection() {
           viewport={{ once: true }}
           className="text-center mb-10"
         >
-          <p className="text-yellow-600 font-semibold tracking-widest text-sm uppercase mb-2">
+          <p className="text-[#FF7900] font-semibold tracking-widest text-sm uppercase mb-2">
             Find Us
           </p>
           <h2 className="text-3xl font-bold">Our Location</h2>
@@ -28,8 +28,11 @@ export default function MapSection() {
         >
           <iframe
             title="Saikrupa Developers Location"
-            src="https://maps.google.com/maps?q=Jai%20Ganesh%20Samrajya%20Spine%20Road%20Pune&t=&z=13&ie=UTF8&iwloc=&output=embed"
-            className="w-full h-96"
+            src="https://maps.google.com/maps?q=Jai+Ganesh+Samrajya+Spine+Road+Pune&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            className="w-full h-64 md:h-96"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
           />
         </motion.div>
       </div>

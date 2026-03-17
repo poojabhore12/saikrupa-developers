@@ -8,25 +8,25 @@ import { X, ZoomIn, MapPin } from "lucide-react";
 // 2. Add/update entries below with src, label, and location
 // ─────────────────────────────────────────────
 const photos = [
-  { src: "/gallery/building1.jpg", label: "Building Front View",    location: "Spine Road, Pune" },
-  { src: "/gallery/building2.jpg", label: "Construction Progress",  location: "Spine Road, Pune" },
-  { src: "/gallery/building3.jpg", label: "Completed Structure",    location: "Spine Road, Pune" },
-  { src: "/gallery/building4.jpg", label: "Interior Work",          location: "Spine Road, Pune" },
-  { src: "/gallery/site1.jpg",     label: "Plot Layout – Phase 1",  location: "Pune" },
-  { src: "/gallery/site2.jpg",     label: "Plot Layout – Phase 2",  location: "Pune" },
-  { src: "/gallery/site3.jpg",     label: "Road & Infrastructure",  location: "Pune" },
-  { src: "/gallery/site4.jpg",     label: "Aerial Site View",       location: "Pune" },
-  { src: "/gallery/site5.jpg",     label: "Industrial Zone",        location: "Pune" },
-  { src: "/gallery/site6.jpg",     label: "Boundary & Gating",      location: "Pune" },
-  { src: "/gallery/site7.jpg",     label: "Plot Handover",          location: "Pune" },
-  { src: "/gallery/site8.jpg",     label: "Project Inauguration",   location: "Pune" },
+  { src: "/gallery/building1.png", label: "Building Front View",    location: "Spine Road, Pune" },
+  { src: "/gallery/building2.png", label: "Construction Progress",  location: "Spine Road, Pune" },
+  { src: "/gallery/building3.png", label: "Completed Structure",    location: "Spine Road, Pune" },
+  { src: "/gallery/building4.png", label: "Interior Work",          location: "Spine Road, Pune" },
+  { src: "/gallery/site1.png",     label: "Plot Layout – Phase 1",  location: "Pune" },
+  { src: "/gallery/site2.png",     label: "Plot Layout – Phase 2",  location: "Pune" },
+  { src: "/gallery/site3.png",     label: "Road & Infrastructure",  location: "Pune" },
+  { src: "/gallery/site4.png",     label: "Aerial Site View",       location: "Pune" },
+  { src: "/gallery/site5.png",     label: "Industrial Zone",        location: "Pune" },
+  { src: "/gallery/site6.png",     label: "Boundary & Gating",      location: "Pune" },
+  { src: "/gallery/site7.png",     label: "Plot Handover",          location: "Pune" },
+  { src: "/gallery/site8.png",     label: "Project Inauguration",   location: "Pune" },
 ];
 
 function Placeholder({ label }) {
   return (
     <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex flex-col items-center justify-center gap-2 p-4">
-      <div className="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center">
-        <ZoomIn size={18} className="text-yellow-500" />
+      <div className="w-10 h-10 rounded-full bg-[#ffe4bf] flex items-center justify-center">
+        <ZoomIn size={18} className="text-[#FF7900]" />
       </div>
       <p className="text-gray-400 text-xs text-center font-medium">{label}</p>
       <p className="text-gray-300 text-xs text-center">Drop photo in<br />public/gallery/</p>
@@ -47,7 +47,7 @@ export default function GallerySection() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <p className="text-yellow-600 font-semibold tracking-widest text-sm uppercase mb-2">
+          <p className="text-[#FF7900] font-semibold tracking-widest text-sm uppercase mb-2">
             Our Work
           </p>
           <h2 className="text-3xl font-bold">Site & Building Gallery</h2>
@@ -84,7 +84,7 @@ export default function GallerySection() {
                 <div className="w-full px-3 py-2.5 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                   <p className="text-white text-xs font-semibold truncate">{photo.label}</p>
                   {photo.location && (
-                    <p className="flex items-center gap-1 text-yellow-300 text-xs mt-0.5 truncate">
+                    <p className="flex items-center gap-1 text-[#ffb055] text-xs mt-0.5 truncate">
                       <MapPin size={10} />
                       {photo.location}
                     </p>
@@ -123,7 +123,7 @@ export default function GallerySection() {
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-5">
                 <p className="text-white font-semibold text-base">{selected.label}</p>
                 {selected.location && (
-                  <p className="flex items-center gap-1.5 text-yellow-300 text-sm mt-1">
+                  <p className="flex items-center gap-1.5 text-[#ffb055] text-sm mt-1">
                     <MapPin size={13} />
                     {selected.location}
                   </p>

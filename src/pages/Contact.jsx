@@ -22,21 +22,26 @@ export default function Contact() {
   };
 
   return (
-    <section className="pt-24 pb-20 bg-gray-100 min-h-screen">
+    <section className="pt-24 pb-20 bg-white min-h-screen">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Title */}
-        <motion.h1
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-center mb-12"
+          className="text-center mb-8 md:mb-12"
         >
-          Contact Saikrupa Developers
-        </motion.h1>
+          <p className="text-[#FF7900] font-semibold tracking-widest text-sm uppercase mb-2">
+            Get In Touch
+          </p>
+          <h1 className="text-2xl md:text-4xl font-bold">
+            Contact Saikrupa Developers
+          </h1>
+        </motion.div>
 
         {/* Two-column: Form (left) + Map (right) */}
-        <div className="grid md:grid-cols-2 gap-10 items-start">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-10 items-start">
 
           {/* LEFT — Form + Contact Info */}
           <motion.div
@@ -48,23 +53,23 @@ export default function Contact() {
             {/* Contact info */}
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <MapPin className="text-yellow-500 mt-1 shrink-0" />
+                <MapPin className="text-[#FF7900] mt-1 shrink-0" />
                 <p className="text-gray-700">
                   Jai Ganesh Samrajya, Spine Road<br />Pune, Maharashtra
                 </p>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="text-yellow-500 shrink-0" />
+                <Phone className="text-[#FF7900] shrink-0" />
                 <p className="text-gray-700">+91 9822329994</p>
               </div>
               <div className="flex items-center gap-3">
-                <Mail className="text-yellow-500 shrink-0" />
+                <Mail className="text-[#FF7900] shrink-0" />
                 <p className="text-gray-700">sudambhore@gmail.com</p>
               </div>
             </div>
 
             {/* Form */}
-            <div className="bg-white p-8 rounded-xl shadow-lg">
+            <div className="bg-white p-5 md:p-8 rounded-xl shadow-lg">
               <h2 className="text-2xl font-semibold mb-6">Send Us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <input
@@ -73,7 +78,7 @@ export default function Contact() {
                   placeholder="Your Name *"
                   value={form.name}
                   onChange={handleChange}
-                  className="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  className="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff9422]"
                   required
                 />
                 <input
@@ -82,7 +87,7 @@ export default function Contact() {
                   placeholder="Phone Number *"
                   value={form.phone}
                   onChange={handleChange}
-                  className="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  className="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff9422]"
                   required
                 />
                 <input
@@ -91,7 +96,7 @@ export default function Contact() {
                   placeholder="Email Address"
                   value={form.email}
                   onChange={handleChange}
-                  className="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  className="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff9422]"
                 />
                 <textarea
                   name="message"
@@ -99,11 +104,11 @@ export default function Contact() {
                   rows="4"
                   value={form.message}
                   onChange={handleChange}
-                  className="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  className="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff9422]"
                 />
                 <button
                   type="submit"
-                  className="w-full bg-yellow-500 text-black py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
+                  className="w-full bg-[#FF7900] hover:bg-[#cc6100] text-white py-3 rounded-lg font-semibold transition"
                 >
                   Send via WhatsApp
                 </button>
@@ -121,12 +126,12 @@ export default function Contact() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="rounded-xl overflow-hidden shadow-lg h-full min-h-[500px]"
+            className="rounded-xl overflow-hidden shadow-lg min-h-[300px] md:min-h-[500px]"
           >
             <iframe
               title="Saikrupa Developers Location"
               src="https://maps.google.com/maps?q=Jai%20Ganesh%20Samrajya%20Spine%20Road%20Pune&t=&z=13&ie=UTF8&iwloc=&output=embed"
-              className="w-full h-full min-h-[500px]"
+              className="w-full h-[300px] md:h-[500px]"
             />
           </motion.div>
 

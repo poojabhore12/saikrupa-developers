@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroImage from "../assets/hero.webp";
+import heroImage from "../assets/project5.png";
 import AboutSection from "../components/AboutSection";
 import GallerySection from "../components/GallerySection";
 import TeamSection from "../components/TeamSection";
@@ -19,7 +19,7 @@ function AboutHero() {
         transition={{ duration: 0.7 }}
         className="relative text-center text-white px-6"
       >
-        <p className="text-yellow-400 font-semibold tracking-widest text-sm uppercase mb-2">
+        <p className="text-[#ff9422] font-semibold tracking-widest text-sm uppercase mb-2">
           Saikrupa Developers
         </p>
         <h1 className="text-4xl md:text-5xl font-bold mb-3">About Us</h1>
@@ -46,12 +46,12 @@ function CTASection() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <p className="text-yellow-400 font-semibold tracking-widest text-sm uppercase mb-3">
+          <p className="text-[#ff9422] font-semibold tracking-widest text-sm uppercase mb-3">
             Let's Build Together
           </p>
           <h2 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
             Ready to Invest in Your <br className="hidden md:block" />
-            <span className="text-yellow-400">Dream Plot?</span>
+            <span className="text-[#ff9422]">Dream Plot?</span>
           </h2>
           <p className="text-white/70 text-sm md:text-base max-w-xl mx-auto mb-10">
             Reach out to our team today for site visits, pricing, and complete legal guidance.
@@ -70,7 +70,7 @@ function CTASection() {
             </a>
             <a
               href="tel:9822329994"
-              className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-black px-7 py-3 rounded-xl font-bold transition shadow-lg"
+              className="inline-flex items-center gap-2 bg-[#FF7900] hover:bg-[#cc6100] text-white px-7 py-3 rounded-xl font-bold transition shadow-lg"
             >
               <Phone size={20} />
               Call Now

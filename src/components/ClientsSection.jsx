@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import client1 from "../assets/clients/client1.png";
 import client2 from "../assets/clients/client2.png";
+import client3 from "../assets/clients/client3.png";
 
-const clients = [client1, client2, client1, client2]; // duplicate for marquee effect
+const clients = [client1, client2, client3, client1, client2, client3]; // duplicate for marquee effect
 
 export default function ClientsSection() {
   return (
@@ -12,7 +13,7 @@ export default function ClientsSection() {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-yellow-600 font-semibold tracking-widest text-sm uppercase mb-2"
+          className="text-[#FF7900] font-semibold tracking-widest text-sm uppercase mb-2"
         >
           Partners & Clients
         </motion.p>

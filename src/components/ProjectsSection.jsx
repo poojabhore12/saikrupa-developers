@@ -17,30 +17,24 @@ const projects = [
     category: "Ongoing Projects",
     description: "Quality construction in progress across Pune.",
     items: [
-      { name: "Ongoing Project 1", src: "/projects/ongoing/ongoing1.jpg" },
-      { name: "Ongoing Project 2", src: "/projects/ongoing/ongoing2.jpg" },
-      { name: "Ongoing Project 3", src: "/projects/ongoing/ongoing3.jpg" },
-      { name: "Ongoing Project 4", src: "/projects/ongoing/ongoing4.jpg" },
+      { name: "Ongoing Project 1", src: "/projects/ongoing/ongoing1.png" },
+      { name: "Ongoing Project 2", src: "/projects/ongoing/ongoing2.png" },
     ],
   },
   {
     category: "Completed Projects",
     description: "Successfully delivered homes and commercial spaces.",
     items: [
-      { name: "Completed Project 1", src: "/projects/completed/completed1.jpg" },
-      { name: "Completed Project 2", src: "/projects/completed/completed2.jpg" },
-      { name: "Completed Project 3", src: "/projects/completed/completed3.jpg" },
-      { name: "Completed Project 4", src: "/projects/completed/completed4.jpg" },
+      { name: "Completed Project 1", src: "/projects/completed/completed1.png" },
+      { name: "Completed Project 2", src: "/projects/completed/completed2.png" },
     ],
   },
   {
     category: "Upcoming Projects",
     description: "Exciting new developments coming soon.",
     items: [
-      { name: "Upcoming Project 1", src: "/projects/upcoming/upcoming1.jpg" },
-      { name: "Upcoming Project 2", src: "/projects/upcoming/upcoming2.jpg" },
-      { name: "Upcoming Project 3", src: "/projects/upcoming/upcoming3.jpg" },
-      { name: "Upcoming Project 4", src: "/projects/upcoming/upcoming4.jpg" },
+      { name: "Upcoming Project 1", src: "/projects/upcoming/upcoming1.png" },
+      { name: "Upcoming Project 2", src: "/projects/upcoming/upcoming2.png" },
     ],
   },
 ];
@@ -79,7 +73,7 @@ function ProjectCard({ project, index }) {
       className="rounded-2xl overflow-hidden shadow-lg bg-white group"
     >
       {/* Carousel */}
-      <div className="relative h-56 overflow-hidden bg-gray-100">
+      <div className="relative h-44 md:h-56 overflow-hidden bg-gray-100">
         <AnimatePresence mode="wait">
           <motion.div
             key={current}
@@ -102,7 +96,7 @@ function ProjectCard({ project, index }) {
         <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
           {project.items.map((_, i) => (
             <button key={i} onClick={() => setCurrent(i)}
-              className={`h-2 rounded-full transition-all ${i === current ? "bg-yellow-400 w-4" : "bg-white/60 w-2"}`}
+              className={`h-2 rounded-full transition-all ${i === current ? "bg-[#ff9422] w-4" : "bg-white/60 w-2"}`}
             />
           ))}
         </div>
@@ -111,7 +105,7 @@ function ProjectCard({ project, index }) {
 
       {/* Info — category label + current project name */}
       <div className="p-5">
-        <p className="text-xs text-yellow-600 font-semibold uppercase tracking-wide mb-1">
+        <p className="text-xs text-[#FF7900] font-semibold uppercase tracking-wide mb-1">
           {project.category}
         </p>
         <AnimatePresence mode="wait">
@@ -143,13 +137,16 @@ export default function ProjectsSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
+          <p className="text-[#FF7900] font-semibold tracking-widest text-sm uppercase mb-2">
+            Portfolio
+          </p>
           <h2 className="text-3xl font-bold">Our Projects</h2>
           <p className="text-gray-500 mt-2">
             Explore our portfolio of quality construction projects.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-10">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} index={index} />
           ))}

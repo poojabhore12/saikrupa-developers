@@ -36,10 +36,10 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="Saikrupa Developers" className="h-12 w-auto" />
+          <img src={logo} alt="Saikrupa Developers" className="h-14 md:h-16 w-auto" />
           <div className="hidden sm:block">
             <p className="font-bold text-gray-800 text-lg leading-tight">Saikrupa Developers</p>
-            <p className="text-xs text-yellow-600 font-medium tracking-wide">Industrial & Residential Plots</p>
+            <p className="text-xs font-medium tracking-wide text-gray-500">Industrial & Residential Plots</p>
           </div>
         </Link>
 
@@ -49,15 +49,15 @@ export default function Navbar() {
             <Link
               key={l.to}
               to={l.to}
-              className={`relative pb-1 transition-colors hover:text-yellow-600 ${
-                location.pathname === l.to ? "text-yellow-600" : ""
+              className={`relative pb-1 transition-colors hover:text-[#cc6100] ${
+                location.pathname === l.to ? "text-[#cc6100]" : ""
               }`}
             >
               {l.label}
               {location.pathname === l.to && (
                 <motion.div
                   layoutId="underline"
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-yellow-500 rounded"
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#FF7900] rounded"
                 />
               )}
             </Link>
@@ -66,7 +66,7 @@ export default function Navbar() {
             href="https://wa.me/919822329994"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-yellow-500 text-black px-5 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition text-sm"
+            className="bg-[#FF7900] text-black px-5 py-2 rounded-lg font-semibold hover:bg-[#ff9422] transition text-sm"
           >
             Enquire Now
           </a>
@@ -95,7 +95,7 @@ export default function Navbar() {
                 key={l.to}
                 to={l.to}
                 className={`block py-2 font-medium ${
-                  location.pathname === l.to ? "text-yellow-600" : "text-gray-700"
+                  location.pathname === l.to ? "text-[#cc6100]" : "text-gray-700"
                 }`}
               >
                 {l.label}
@@ -105,7 +105,7 @@ export default function Navbar() {
               href="https://wa.me/919822329994"
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-yellow-500 text-black px-5 py-2 rounded-lg font-semibold text-center"
+              className="block bg-[#FF7900] text-black px-5 py-2 rounded-lg font-semibold text-center hover:bg-[#ff9422] transition"
             >
               Enquire Now
             </a>

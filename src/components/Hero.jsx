@@ -1,4 +1,4 @@
-import heroImage from "../assets/hero.webp";
+import heroImage from "../assets/hero.png";
 import { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
@@ -68,12 +68,12 @@ Please contact me with more information.`;
       {/* overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
 
-      <div className="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center text-white py-20">
+      <div className="relative max-w-6xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-6 md:gap-12 items-center text-white pt-24 pb-10 md:py-20">
 
         {/* LEFT TEXT */}
         <div>
 
-          <h1 className="text-5xl font-bold mb-6">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
             Saikrupa Developers
           </h1>
 
@@ -98,13 +98,15 @@ Please contact me with more information.`;
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-wrap gap-4 mt-8">
-            <Link
-              to="/about"
-              className="bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
+          <div className="flex flex-row flex-wrap gap-3 mt-6">
+            <a
+              href="https://wa.me/917709361381?text=Hello%2C%20I%20need%20assistance%20with%20site%20maintenance%20work.%20Please%20contact%20me."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#FF7900] hover:bg-[#cc6100] text-white px-6 py-3 rounded-lg font-semibold transition"
             >
-              Learn More
-            </Link>
+              Site Maintenance
+            </a>
             <a
               href="https://wa.me/919822329994"
               target="_blank"
@@ -119,21 +121,21 @@ Please contact me with more information.`;
           </div>
 
           {/* Stats */}
-          <div className="flex flex-wrap gap-8 mt-10">
+          <div className="flex flex-row gap-4 md:gap-8 mt-6 md:mt-10">
             {[
+              { number: "500+", label: "Plots Delivered" },
+              { number: "50+", label: "Acres Developed" },
               { number: "10+", label: "Years Experience" },
-              { number: "50+", label: "Projects Completed" },
-              { number: "200+", label: "Happy Clients" },
             ].map((stat, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + i * 0.15, duration: 0.5 }}
-                className="text-center"
+                className="text-center bg-white/15 backdrop-blur-sm px-4 py-2 rounded-xl border border-white/20"
               >
-                <p className="text-3xl font-bold text-yellow-400">{stat.number}</p>
-                <p className="text-sm mt-1 text-white/80">{stat.label}</p>
+                <p className="text-3xl font-bold text-white">{stat.number}</p>
+                <p className="text-xs mt-0.5 text-white/70">{stat.label}</p>
               </motion.div>
             ))}
           </div>
@@ -180,7 +182,7 @@ Please contact me with more information.`;
 
             <button
               type="submit"
-              className="w-full bg-yellow-500 text-black py-3 rounded-lg font-semibold hover:bg-yellow-400"
+              className="w-full bg-[#FF7900] hover:bg-[#cc6100] text-white py-3 rounded-lg font-semibold transition"
             >
               Submit
             </button>

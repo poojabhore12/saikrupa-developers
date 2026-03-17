@@ -33,14 +33,14 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-yellow-600 font-semibold tracking-widest text-sm uppercase mb-2">
+          <p className="text-[#FF7900] font-semibold tracking-widest text-sm uppercase mb-2">
             Who We Are
           </p>
           <h1 className="text-4xl font-bold">About Saikrupa Developers</h1>
         </motion.div>
 
         {/* Video (left) + Company text (right) */}
-        <div className="grid md:grid-cols-2 gap-14 items-center mb-20">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-14 items-center mb-12 md:mb-20">
 
           {/* Video */}
           <motion.a
@@ -52,20 +52,20 @@ export default function AboutSection() {
             transition={{ duration: 0.7 }}
             className="group relative rounded-2xl overflow-hidden shadow-2xl aspect-video bg-gradient-to-br from-gray-800 to-gray-900 block"
           >
-            <div className="absolute inset-0 bg-yellow-500/5 group-hover:bg-yellow-500/10 transition-all duration-500" />
+            <div className="absolute inset-0 bg-[#FF7900]/5 group-hover:bg-[#FF7900]/10 transition-all duration-500" />
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
               <motion.div
                 whileHover={{ scale: 1.1 }}
-                className="bg-yellow-500 rounded-full p-5 shadow-2xl shadow-yellow-500/40 group-hover:shadow-yellow-500/60 transition-shadow"
+                className="bg-[#FF7900] rounded-full p-5 shadow-2xl shadow-[#FF7900]/20/40 group-hover:shadow-[#FF7900]/20/60 transition-shadow"
               >
-                <Play size={40} className="text-black fill-black ml-1" />
+                <Play size={40} className="text-white fill-white ml-1" />
               </motion.div>
               <div className="text-center">
                 <p className="text-white font-bold text-lg">Watch Our Projects</p>
                 <p className="text-gray-400 text-sm mt-1">Click to open video</p>
               </div>
             </div>
-            <div className="absolute top-3 right-3 bg-yellow-500 text-black text-xs font-bold px-3 py-1 rounded-full">
+            <div className="absolute top-3 right-3 bg-[#FF7900] text-white text-xs font-bold px-3 py-1 rounded-full">
               Video
             </div>
           </motion.a>
@@ -92,7 +92,7 @@ export default function AboutSection() {
               href="https://wa.me/919822329994"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-yellow-500 text-black px-6 py-3 rounded-xl font-bold hover:bg-yellow-400 transition shadow"
+              className="inline-flex items-center gap-2 bg-[#FF7900] hover:bg-[#cc6100] text-white px-6 py-3 rounded-xl font-bold transition shadow"
             >
               <Phone size={18} />
               Contact Us
@@ -115,8 +115,8 @@ export default function AboutSection() {
                 whileHover={{ y: -6 }}
                 className="bg-gray-50 border border-gray-100 p-7 rounded-2xl shadow-sm text-center group transition-all duration-300"
               >
-                <div className="inline-flex bg-yellow-100 p-4 rounded-full mb-4 group-hover:bg-yellow-500 transition-colors">
-                  <Icon size={28} className="text-yellow-600 group-hover:text-white transition-colors" />
+                <div className="inline-flex bg-[#ffe4bf] p-4 rounded-full mb-4 group-hover:bg-[#FF7900] transition-colors">
+                  <Icon size={28} className="text-[#cc6100] group-hover:text-white transition-colors" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{v.title}</h3>
                 <p className="text-gray-500 text-sm">{v.desc}</p>

@@ -51,13 +51,13 @@ export default function TeamSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <p className="text-yellow-600 font-semibold tracking-widest text-sm uppercase mb-2">
+          <p className="text-[#FF7900] font-semibold tracking-widest text-sm uppercase mb-2">
             Our People
           </p>
           <h2 className="text-3xl md:text-4xl font-bold">Meet Our Team</h2>
         </motion.div>
 
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="flex flex-wrap justify-center gap-5 md:gap-8">
           {team.map((member, index) => (
             <motion.div
               key={index}
@@ -66,10 +66,10 @@ export default function TeamSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -6 }}
-              className="flex flex-col items-center text-center w-36 group"
+              className="flex flex-col items-center text-center w-28 md:w-36 group"
             >
               {/* Circular photo */}
-              <div className="relative w-28 h-28 rounded-full overflow-hidden mb-4 ring-4 ring-gray-100 group-hover:ring-yellow-400 transition-all duration-300 shadow-lg">
+              <div className="relative w-28 h-28 rounded-full overflow-hidden mb-4 ring-4 ring-gray-100 group-hover:ring-[#ff9422] transition-all duration-300 shadow-lg">
                 <img
                   src={member.image}
                   alt={member.name}
@@ -84,7 +84,7 @@ export default function TeamSection() {
               </h3>
 
               {/* Role badge */}
-              <span className="text-xs text-yellow-600 font-semibold bg-yellow-50 px-2 py-0.5 rounded-full mb-3">
+              <span className="text-xs text-[#FF7900] font-semibold bg-[#ffe4bf] px-2 py-0.5 rounded-full mb-3">
                 {member.role}
               </span>
 
@@ -94,14 +94,14 @@ export default function TeamSection() {
                   href={member.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center w-7 h-7 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-colors"
+                  className="flex items-center justify-center w-7 h-7 bg-gray-700 hover:bg-gray-600 text-white rounded-full transition-colors"
                   title={`${member.name} on LinkedIn`}
                 >
                   <Linkedin size={13} />
                 </a>
                 <a
                   href={`tel:${member.phone}`}
-                  className="flex items-center justify-center w-7 h-7 bg-yellow-500 hover:bg-yellow-400 text-black rounded-full transition-colors"
+                  className="flex items-center justify-center w-7 h-7 bg-[#FF7900] hover:bg-[#cc6100] text-white rounded-full transition-colors"
                   title={`Call ${member.name}`}
                 >
                   <Phone size={13} />

@@ -67,6 +67,9 @@ export default function FAQSection() {
           viewport={{ once: true }}
           className="text-center mb-8"
         >
+          <p className="text-[#FF7900] font-semibold tracking-widest text-sm uppercase mb-2">
+            Have Questions?
+          </p>
           <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
           <p className="text-gray-500 mt-2 text-sm">
             Everything you need to know about our plots and services.
@@ -84,20 +87,20 @@ export default function FAQSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.06 }}
                 className={`border rounded-xl overflow-hidden transition-all duration-300 ${
-                  isOpen ? "border-yellow-400 shadow-md" : "border-gray-200"
+                  isOpen ? "border-[#ff9422] shadow-md" : "border-gray-200"
                 }`}
               >
                 <button
                   onClick={() => handleClick(index)}
                   className={`w-full flex items-center justify-between p-5 text-left font-semibold transition-colors ${
-                    isOpen ? "bg-yellow-50 text-yellow-700" : "text-gray-800 hover:bg-gray-50"
+                    isOpen ? "bg-[#fff4e6] text-[#994800]" : "text-gray-800 hover:bg-gray-50"
                   }`}
                 >
                   <span className="pr-4">{faq.q}</span>
                   <motion.div
                     animate={{ rotate: isOpen ? 45 : 0 }}
                     transition={{ duration: 0.25 }}
-                    className={`shrink-0 ${isOpen ? "text-yellow-500" : "text-gray-400"}`}
+                    className={`shrink-0 ${isOpen ? "text-[#FF7900]" : "text-gray-400"}`}
                   >
                     <Plus size={20} />
                   </motion.div>
@@ -106,7 +109,7 @@ export default function FAQSection() {
                 {/* Progress bar — flush against bottom of button, no gap */}
                 {isOpen && !paused && (
                   <motion.div
-                    className="h-0.5 bg-yellow-400 origin-right"
+                    className="h-0.5 bg-[#ff9422] origin-right"
                     initial={{ scaleX: 1 }}
                     animate={{ scaleX: 0 }}
                     transition={{ duration: INTERVAL / 1000, ease: "linear" }}

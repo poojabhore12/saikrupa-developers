@@ -5,10 +5,10 @@ import logo from "../assets/logo.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8">
+    <footer className="bg-gray-900 pt-10 pb-6 md:pt-16 md:pb-8">
       <div className="max-w-6xl mx-auto px-6">
 
-        <div className="grid md:grid-cols-4 gap-10 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 mb-8 md:mb-12">
 
           {/* Brand */}
           <motion.div
@@ -17,8 +17,8 @@ export default function Footer() {
             viewport={{ once: true }}
             className="md:col-span-1"
           >
-            <img src={logo} alt="Saikrupa Developers" className="h-14 mb-4" />
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <img src={logo} alt="Saikrupa Developers" className="h-36 mb-4" />
+            <p className="text-white/80 text-sm leading-relaxed">
               Pune's trusted industrial and residential plot developer since 2011.
               Building spaces with trust, quality, and care.
             </p>
@@ -33,8 +33,8 @@ export default function Footer() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.15, backgroundColor: "#f59e0b" }}
-                  className="bg-gray-800 p-2.5 rounded-full transition-colors"
+                  whileHover={{ scale: 1.15 }}
+                  className="bg-gray-700 text-white p-2.5 rounded-full transition-colors hover:bg-[#FF7900] hover:text-white"
                 >
                   <Icon size={18} />
                 </motion.a>
@@ -49,15 +49,15 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            <h3 className="text-base font-bold mb-5 text-yellow-400 tracking-wide uppercase">Quick Links</h3>
-            <ul className="space-y-3 text-gray-400 text-sm">
+            <h3 className="text-base font-bold mb-5 text-[#ff9422] tracking-wide uppercase">Quick Links</h3>
+            <ul className="space-y-3 text-white/80 text-sm">
               {[
                 { to: "/", label: "Home" },
                 { to: "/about", label: "About Us" },
                 { to: "/contact", label: "Contact" },
               ].map((l) => (
                 <li key={l.to}>
-                  <Link to={l.to} className="hover:text-yellow-400 transition-colors">
+                  <Link to={l.to} className="hover:text-[#FF7900] transition-colors">
                     → {l.label}
                   </Link>
                 </li>
@@ -72,10 +72,10 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <h3 className="text-base font-bold mb-5 text-yellow-400 tracking-wide uppercase">Our Services</h3>
-            <ul className="space-y-3 text-gray-400 text-sm">
-              {["Industrial Plots", "Residential Plots", "NA Farmhouse Plots", "Legal Documentation", "Site Development"].map((s) => (
-                <li key={s} className="hover:text-gray-300 transition-colors cursor-default">→ {s}</li>
+            <h3 className="text-base font-bold mb-5 text-[#ff9422] tracking-wide uppercase">Our Services</h3>
+            <ul className="space-y-3 text-white/80 text-sm">
+              {["Industrial Plots", "Residential Plots", "NA Plots", "Custom Plot Sizes", "Site Development", "Site Maintenance"].map((s) => (
+                <li key={s} className="cursor-default">→ {s}</li>
               ))}
             </ul>
           </motion.div>
@@ -87,19 +87,19 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
           >
-            <h3 className="text-base font-bold mb-5 text-yellow-400 tracking-wide uppercase">Contact Us</h3>
-            <ul className="space-y-4 text-gray-400 text-sm">
+            <h3 className="text-base font-bold mb-5 text-[#ff9422] tracking-wide uppercase">Contact Us</h3>
+            <ul className="space-y-4 text-white/80 text-sm">
               <li className="flex items-start gap-3">
-                <MapPin size={16} className="text-yellow-500 mt-0.5 shrink-0" />
+                <MapPin size={16} className="text-[#ff9422] mt-0.5 shrink-0" />
                 <span>A wing, Shop no.145, Jai Ganesh Samrajya, Spine Road near Cosmos Bank, Pune – 411028</span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone size={16} className="text-yellow-500 shrink-0" />
-                <a href="tel:9822329994" className="hover:text-yellow-400 transition">+91 9822329994</a>
+                <Phone size={16} className="text-[#ff9422] shrink-0" />
+                <a href="tel:9822329994" className="hover:text-[#FF7900] transition">+91 9822329994</a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail size={16} className="text-yellow-500 shrink-0" />
-                <a href="mailto:sudambhore@gmail.com" className="hover:text-yellow-400 transition">sudambhore@gmail.com</a>
+                <Mail size={16} className="text-[#ff9422] shrink-0" />
+                <a href="mailto:sudambhore@gmail.com" className="hover:text-[#FF7900] transition">sudambhore@gmail.com</a>
               </li>
             </ul>
           </motion.div>
@@ -107,9 +107,9 @@ export default function Footer() {
         </div>
 
         {/* Divider + Copyright */}
-        <div className="border-t border-gray-800 pt-6 text-center text-gray-500 text-sm">
+        <div className="border-t border-white/20 pt-6 text-center text-white/70 text-sm">
           © {new Date().getFullYear()} Saikrupa Developers. All rights reserved. |{" "}
-          <span className="text-gray-400">Industrial & Residential Plots, Pune</span>
+          <span className="text-white/60">Industrial & Residential Plots, Pune</span>
         </div>
 
       </div>

@@ -42,48 +42,23 @@ export default function StatsSection() {
   }, [visible]);
 
   return (
-    <section
-      ref={ref}
-      className="py-20 relative overflow-hidden"
-      style={{ background: "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)" }}
-    >
-      {/* Decorative background circles */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-yellow-500/5 rounded-full -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-500/5 rounded-full translate-x-1/2 translate-y-1/2" />
-
-      <div className="relative max-w-6xl mx-auto px-6">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center text-yellow-400 font-semibold tracking-widest text-sm uppercase mb-14"
-        >
-          Our Achievements
-        </motion.p>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+    <section ref={ref} className="bg-gray-900">
+      <div className="max-w-6xl mx-auto px-6 py-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.15 }}
-                whileHover={{ scale: 1.05 }}
-                className="text-center bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm"
-              >
-                <div className="flex justify-center mb-4">
-                  <div className="bg-yellow-500/20 p-3 rounded-full">
-                    <Icon size={28} className="text-yellow-400" />
+              <div key={index} className="text-center">
+                <div className="flex justify-center mb-3">
+                  <div className="bg-[#FF7900]/20 p-3 rounded-full">
+                    <Icon size={26} className="text-[#ff9422]" />
                   </div>
                 </div>
-                <h2 className="text-4xl font-bold text-yellow-400 mb-1">
+                <h2 className="text-4xl font-bold mb-1 text-[#ff9422]">
                   {counts[index]}{stat.suffix}
                 </h2>
-                <p className="text-white/70 text-sm">{stat.label}</p>
-              </motion.div>
+                <p className="text-gray-400 text-sm">{stat.label}</p>
+              </div>
             );
           })}
         </div>
