@@ -17,24 +17,24 @@ const projects = [
     category: "Ongoing Projects",
     description: "Quality construction in progress across Pune.",
     items: [
-      { name: "Ongoing Project 1", src: "/projects/ongoing/ongoing1.png" },
-      { name: "Ongoing Project 2", src: "/projects/ongoing/ongoing2.png" },
+      { name: "Ongoing Project", src: "/projects/ongoing/ongoing1.png" },
+      { name: "Ongoing Project", src: "/projects/ongoing/ongoing2.png" },
     ],
   },
   {
     category: "Completed Projects",
     description: "Successfully delivered homes and commercial spaces.",
     items: [
-      { name: "Completed Project 1", src: "/projects/completed/completed1.png" },
-      { name: "Completed Project 2", src: "/projects/completed/completed2.png" },
+      { name: "Completed Project", src: "/projects/completed/completed1.png" },
+      { name: "Completed Project", src: "/projects/completed/completed2.png" },
     ],
   },
   {
     category: "Upcoming Projects",
     description: "Exciting new developments coming soon.",
     items: [
-      { name: "Upcoming Project 1", src: "/projects/upcoming/upcoming1.png" },
-      { name: "Upcoming Project 2", src: "/projects/upcoming/upcoming2.png" },
+      { name: "Upcoming Project", src: "/projects/upcoming/upcoming1.png" },
+      { name: "Upcoming Project", src: "/projects/upcoming/upcoming2.png" },
     ],
   },
 ];
@@ -93,13 +93,13 @@ function ProjectCard({ project, index }) {
 
 
         {/* Dots */}
-        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+        {/* <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
           {project.items.map((_, i) => (
             <button key={i} onClick={() => setCurrent(i)}
               className={`h-2 rounded-full transition-all ${i === current ? "bg-[#ff9422] w-4" : "bg-white/60 w-2"}`}
             />
           ))}
-        </div>
+        </div> */}
 
       </div>
 
