@@ -238,27 +238,22 @@ export default function Redevelopment() {
       </section>
 
       {/* What We Handle */}
-      <section className="py-20 bg-gray-900">
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-6">
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-14"
+            className="text-center mb-16"
           >
-            <div>
-              <p className="text-[#FF7900] font-semibold tracking-widest text-sm uppercase mb-3">Scope of Work</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
-                What We Manage,<br />Start to Finish
-              </h2>
-            </div>
-            <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-              We take complete ownership — every approval, every coordination, every milestone.
-            </p>
+            <p className="text-[#FF7900] font-semibold tracking-widest text-sm uppercase mb-2">Scope of Work</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+              What We Manage, Start to Finish
+            </h2>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-white/5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-0">
             {[
               "Site Inspection & Feasibility",
               "Architectural Planning",
@@ -275,18 +270,20 @@ export default function Redevelopment() {
             ].map((title, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="group bg-gray-800 hover:bg-[#FF7900] transition-colors duration-300 p-6 flex flex-col justify-between gap-8 cursor-default"
+                className="group flex items-center gap-5 border-b border-gray-200 py-5 hover:border-[#FF7900] transition-colors duration-300"
               >
-                <span className="text-4xl font-black text-white/10 group-hover:text-white/20 transition-colors duration-300 leading-none">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <p className="text-gray-300 group-hover:text-white font-semibold text-sm leading-snug transition-colors duration-300">
+                <div className="w-9 h-9 rounded-full border-2 border-gray-200 group-hover:border-[#FF7900] group-hover:bg-[#FF7900] flex items-center justify-center transition-all duration-300 shrink-0">
+                  <span className="text-xs font-black text-gray-400 group-hover:text-white transition-colors duration-300">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                </div>
+                <span className="text-gray-700 group-hover:text-gray-900 font-semibold text-sm transition-colors duration-200">
                   {title}
-                </p>
+                </span>
               </motion.div>
             ))}
           </div>
