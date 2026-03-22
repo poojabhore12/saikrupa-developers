@@ -144,7 +144,7 @@ export default function FAQSection() {
           className="text-center mt-8"
         >
           <a
-            href="https://wa.me/919822329994"
+            href="https://wa.me/919822329994?text=Hello%20Saikrupa%20Developers%2C%0AI%20am%20interested%20in%20your%20services.%20Please%20get%20in%20touch%20with%20me."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-green-500 text-white px-6 py-2.5 rounded-xl font-semibold hover:bg-green-400 transition shadow-md text-sm"

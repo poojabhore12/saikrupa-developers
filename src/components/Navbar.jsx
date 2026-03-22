@@ -65,7 +65,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href="https://wa.me/919822329994"
+            href="https://wa.me/919822329994?text=Hello%20Saikrupa%20Developers%2C%0AI%20am%20interested%20in%20your%20services.%20Please%20get%20in%20touch%20with%20me."
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#FF7900] text-black px-5 py-2 rounded-lg font-semibold hover:bg-[#ff9422] transition text-sm"
@@ -104,7 +104,7 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="https://wa.me/919822329994"
+              href="https://wa.me/919822329994?text=Hello%20Saikrupa%20Developers%2C%0AI%20am%20interested%20in%20your%20services.%20Please%20get%20in%20touch%20with%20me."
               target="_blank"
               rel="noopener noreferrer"
               className="block bg-[#FF7900] text-black px-5 py-2 rounded-lg font-semibold text-center hover:bg-[#ff9422] transition"

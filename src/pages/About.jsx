@@ -61,7 +61,7 @@ function CTASection() {
 
           <div className="flex flex-wrap justify-center gap-4">
             {/* <a
-              href="https://wa.me/919822329994"
+              href="https://wa.me/919822329994?text=Hello%20Saikrupa%20Developers%2C%0AI%20am%20interested%20in%20your%20services.%20Please%20get%20in%20touch%20with%20me."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white px-7 py-3 rounded-xl font-bold transition shadow-lg"

@@ -17,7 +17,7 @@ export default function WhatsappButton() {
       <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-30" />
 
       <a
-        href="https://wa.me/919822329994"
+        href="https://wa.me/919822329994?text=Hello%20Saikrupa%20Developers%2C%0AI%20am%20interested%20in%20your%20services.%20Please%20get%20in%20touch%20with%20me."
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"

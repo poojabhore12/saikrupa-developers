@@ -89,7 +89,7 @@ export default function AboutSection() {
             </p>
 
             <a
-              href="https://wa.me/919822329994"
+              href="https://wa.me/919822329994?text=Hello%20Saikrupa%20Developers%2C%0AI%20am%20interested%20in%20your%20services.%20Please%20get%20in%20touch%20with%20me."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#FF7900] hover:bg-[#cc6100] text-white px-6 py-3 rounded-xl font-bold transition shadow"

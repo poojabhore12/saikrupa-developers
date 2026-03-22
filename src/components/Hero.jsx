@@ -108,7 +108,7 @@ Please contact me with more information.`;
               Site Maintenance
             </a>
             <a
-              href="https://wa.me/919822329994"
+              href="https://wa.me/919822329994?text=Hello%20Saikrupa%20Developers%2C%0AI%20am%20interested%20in%20your%20services.%20Please%20get%20in%20touch%20with%20me."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-400 transition"
