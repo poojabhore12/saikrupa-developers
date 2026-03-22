@@ -20,6 +20,8 @@ export default function Navbar() {
   const links = [
     { to: "/", label: "Home" },
     { to: "/about", label: "About" },
+    { to: "/gallery", label: "Gallery" },
+    { to: "/redevelopment", label: "Redevelopment" },
     { to: "/contact", label: "Contact" },
   ];
 
@@ -32,11 +34,11 @@ export default function Navbar() {
         scrolled ? "bg-white shadow-lg" : "bg-white/95 shadow-md"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
+      <div className="max-w-6xl mx-auto px-6 py-1.5 flex justify-between items-center">
 
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="Saikrupa Developers" className="h-14 md:h-16 w-auto" />
+          <img src={logo} alt="Saikrupa Developers" className="h-12 md:h-14 w-auto" />
           <div className="hidden sm:block">
             <p className="font-bold text-gray-800 text-lg leading-tight">Saikrupa Developers</p>
             <p className="text-xs font-medium tracking-wide text-gray-500">Industrial & Residential Plots</p>

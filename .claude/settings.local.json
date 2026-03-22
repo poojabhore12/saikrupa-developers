@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(git:*)",
+      "WebFetch(domain:www.brandempower.org)",
+      "Bash(npm install:*)",
+      "Bash(npx sharp-cli:*)",
+      "Bash(node:*)",
+      "Bash(xargs sed:*)",
+      "Bash(find C:/Users/psbho/saikrupa-developers -name project*.png -o -name project*.jpg)",
+      "Bash(ls -la /c/Users/psbho/saikrupa-developers/src/components/*.jsx)",
+      "Bash(ls -la /c/Users/psbho/saikrupa-developers/src/pages/*.jsx)"
+    ]
+  }
+}

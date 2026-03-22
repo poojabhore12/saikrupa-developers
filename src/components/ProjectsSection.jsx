@@ -1,40 +1,49 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ImageOff } from "lucide-react";
+import g1  from "../assets/gallery/g1.jpeg";
+import g2  from "../assets/gallery/g2.jpeg";
+import g3  from "../assets/gallery/g3.jpeg";
+import g4  from "../assets/gallery/g4.jpeg";
+import g5  from "../assets/gallery/g5.jpeg";
+import g6  from "../assets/gallery/g6.jpeg";
+import g7  from "../assets/gallery/g7.jpeg";
+import project1 from "../assets/project1.png";
+import project2 from "../assets/project2.png";
+import project3 from "../assets/project3.png";
+import project4 from "../assets/project4.png";
+import project5 from "../assets/project5.png";
+import project6 from "../assets/project6.png";
 
-// ─────────────────────────────────────────────────────────────
-// HOW TO ADD PHOTOS:
-// Drop images into the matching folder inside public/projects/
-//
-//  Ongoing   → public/projects/ongoing/ongoing1.jpg … ongoing4.jpg
-//  Completed → public/projects/completed/completed1.jpg … completed4.jpg
-//  Upcoming  → public/projects/upcoming/upcoming1.jpg … upcoming4.jpg
-//
-// You can add more by duplicating a slot entry below.
-// ─────────────────────────────────────────────────────────────
 const projects = [
   {
     category: "Ongoing Projects",
     description: "Quality construction in progress across Pune.",
     items: [
-      { name: "Ongoing Project", src: "/projects/ongoing/ongoing1.png" },
-      { name: "Ongoing Project", src: "/projects/ongoing/ongoing2.png" },
+      { name: "Ongoing Project", src: g5 },
+      { name: "Ongoing Project", src: project2 },
     ],
   },
   {
     category: "Completed Projects",
     description: "Successfully delivered homes and commercial spaces.",
     items: [
-      { name: "Completed Project", src: "/projects/completed/completed1.png" },
-      { name: "Completed Project", src: "/projects/completed/completed2.png" },
+      { name: "Completed Project", src: g1 },
+      { name: "Completed Project", src: g2 },
+      { name: "Completed Project", src: g3 },
+      { name: "Completed Project", src: g4 },
+      { name: "Completed Project", src: g5 },
+      { name: "Completed Project", src: g6 },
     ],
   },
   {
     category: "Upcoming Projects",
     description: "Exciting new developments coming soon.",
     items: [
-      { name: "Upcoming Project", src: "/projects/upcoming/upcoming1.png" },
-      { name: "Upcoming Project", src: "/projects/upcoming/upcoming2.png" },
+      { name: "Upcoming Project", src: g7 },
+      { name: "Upcoming Project", src: project4 },
+      { name: "Upcoming Project", src: project5 },
+      { name: "Upcoming Project", src: project6 },
     ],
   },
 ];

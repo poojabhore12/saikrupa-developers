@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import heroImage from "../assets/project5.png";
 import AboutSection from "../components/AboutSection";
+import VisionMissionSection from "../components/VisionMissionSection";
 import GallerySection from "../components/GallerySection";
 import TeamSection from "../components/TeamSection";
 import { Link } from "react-router-dom";
@@ -59,7 +60,7 @@ function CTASection() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
-            <a
+            {/* <a
               href="https://wa.me/919822329994"
               target="_blank"
               rel="noopener noreferrer"
@@ -67,7 +68,7 @@ function CTASection() {
             >
               <MessageCircle size={20} />
               WhatsApp Us
-            </a>
+            </a> */}
             <a
               href="tel:9822329994"
               className="inline-flex items-center gap-2 bg-[#FF7900] hover:bg-[#cc6100] text-white px-7 py-3 rounded-xl font-bold transition shadow-lg"
@@ -95,6 +96,7 @@ export default function About() {
     <div className="pt-16">
       <AboutHero />
       <AboutSection />
+      <VisionMissionSection />
       <GallerySection />
       <TeamSection />
       <CTASection />

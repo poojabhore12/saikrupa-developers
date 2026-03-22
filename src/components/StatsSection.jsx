@@ -4,7 +4,7 @@ import { Trophy, Users, Building2, Calendar } from "lucide-react";
 
 const stats = [
   { number: 10, suffix: "+", label: "Years Experience", icon: Calendar },
-  { number: 75, suffix: "+", label: "Projects Completed", icon: Building2 },
+  { number: 30, suffix: "+", label: "Projects Completed", icon: Building2 },
   { number: 200, suffix: "+", label: "Happy Clients", icon: Users },
   { number: 40, suffix: "+", label: "Awards & Recognition", icon: Trophy },
 ];

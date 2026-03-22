@@ -30,7 +30,7 @@ const features = [
   },
   {
     icon: Landmark,
-    title: "Legal & Clear Titles",
+    title: "NA-Approved Plots",
     desc: "All plots come with RERA-approved and legally verified documentation — zero hassle.",
     color: "bg-[#fff4e6] text-[#cc6100]",
   },

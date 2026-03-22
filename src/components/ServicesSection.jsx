@@ -1,44 +1,50 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import project1 from "../assets/project5.png";
+import project2 from "../assets/project2.png";
+import project3 from "../assets/gallery/g4.jpeg";
+import project4 from "../assets/na_plot.png";
+import project5 from "../assets/gallery/site_dev.png";
+import project6 from "../assets/Maintenance.png";
 
 const services = [
   {
-    image: null,
+    image: project1,
     title: "Industrial Plots",
     desc: "NA-approved industrial plots with wide roads, electricity, and water supply. Ideal for factories, warehouses, and manufacturing units.",
     badge: "Most Popular",
     badgeColor: "bg-[#FF7900] text-white",
   },
   {
-    image: null,
+    image: project2,
     title: "Residential Plots",
     desc: "Peaceful and well-planned residential plots in prime locations with all basic amenities for your dream home.",
     badge: null,
     badgeColor: "",
   },
   {
-    image: null,
+    image: project3,
     title: "NA Plots",
     desc: "Non-agricultural approved plots with clear titles, ready for immediate construction or investment.",
     badge: null,
     badgeColor: "",
   },
   {
-    image: null,
+    image: project4,
     title: "Custom Plot Sizes",
     desc: "Flexible plot sizes from 1000 sq.ft to 10,000 sq.ft to match your budget and requirements.",
     badge: null,
     badgeColor: "",
   },
   {
-    image: null,
+    image: project5,
     title: "Site Development",
     desc: "Complete site development including road construction, boundary walls, drainage, and utility connections.",
     badge: null,
     badgeColor: "",
   },
   {
-    image: null,
+    image: project6,
     title: "Site Maintenance",
     desc: "Ongoing maintenance services for plots and developed sites — including cleaning, repairs, drainage upkeep, and general upkeep of common areas.",
     badge: null,

@@ -93,8 +93,8 @@ Please contact me with more information.`;
           />
 
           <p>
-            10+ years of experience delivering quality building
-            projects with excellence and trust.
+            Trusted by hundreds of families and industries across Pune
+            for NA-approved plots, site development, and end-to-end real estate solutions.
           </p>
 
           {/* Buttons */}
@@ -123,8 +123,8 @@ Please contact me with more information.`;
           {/* Stats */}
           <div className="flex flex-row gap-4 md:gap-8 mt-6 md:mt-10">
             {[
-              { number: "500+", label: "Plots Delivered" },
-              { number: "50+", label: "Acres Developed" },
+              { number: "100+", label: "Plots Developed" },
+              { number: "30+", label: "Projects Delivered" },
               { number: "10+", label: "Years Experience" },
             ].map((stat, i) => (
               <motion.div
