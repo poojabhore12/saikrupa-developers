@@ -5,7 +5,30 @@ import {
   Building2, ClipboardList, HardHat, FileCheck, HandshakeIcon,
   CheckCircle, Mail, MessageCircle, ArrowRight,
 } from "lucide-react";
+import { ZoomIn, MapPin, X } from "lucide-react";
+import { AnimatePresence } from "framer-motion";
 import heroImage from "../assets/gallery/g1.jpeg";
+import site11 from "../assets/site_img/site11.jpeg";
+import site12 from "../assets/site_img/site12.jpeg";
+import site13 from "../assets/site_img/site13.jpeg";
+import site14 from "../assets/site_img/site14.jpeg";
+import site15 from "../assets/site_img/site15.jpeg";
+import site16 from "../assets/site_img/site16.jpeg";
+import site17 from "../assets/site_img/site17.jpeg";
+import site18 from "../assets/site_img/site18.jpeg";
+import site19 from "../assets/site_img/site19.jpeg";
+
+const sitePhotos = [
+  { src: site11, label: "Redevelopment Site", location: "Pune" },
+  { src: site12, label: "Redevelopment Site", location: "Pune" },
+  { src: site13, label: "Redevelopment Site", location: "Pune" },
+  { src: site14, label: "Redevelopment Site", location: "Pune" },
+  { src: site15, label: "Redevelopment Site", location: "Pune" },
+  { src: site16, label: "Redevelopment Site", location: "Pune" },
+  { src: site17, label: "Redevelopment Site", location: "Pune" },
+  { src: site18, label: "Redevelopment Site", location: "Pune" },
+  { src: site19, label: "Redevelopment Site", location: "Pune" },
+];
 
 const benefits = [
   { icon: Building2,     title: "Modern Infrastructure",   desc: "We rebuild with updated amenities, wider roads, better drainage, and modern utilities." },
@@ -26,6 +49,7 @@ const steps = [
 
 export default function Redevelopment() {
   const [form, setForm] = useState({ name: "", phone: "", address: "", message: "" });
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -237,53 +261,152 @@ export default function Redevelopment() {
         </div>
       </section>
 
-      {/* What We Handle */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-5xl mx-auto px-6">
+      {/* Site Gallery */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
-            <p className="text-[#FF7900] font-semibold tracking-widest text-sm uppercase mb-2">Scope of Work</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-              What We Manage, Start to Finish
-            </h2>
+            <p className="text-[#FF7900] font-semibold tracking-widest text-sm uppercase mb-2">
+              Our Work
+            </p>
+            <h2 className="text-3xl font-bold text-gray-800">Redevelopment Site Gallery</h2>
+            <p className="text-gray-500 mt-2 text-sm max-w-xl mx-auto">
+              A glimpse into our ongoing and completed redevelopment projects across Pune.
+            </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-0">
+          <div className="grid grid-cols-3 gap-4">
+            {sitePhotos.map((photo, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.93 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.04 }}
+                whileHover={{ scale: 1.03 }}
+                onClick={() => setSelectedPhoto(photo)}
+                className="relative rounded-xl overflow-hidden shadow-md cursor-pointer group aspect-square"
+              >
+                <img
+                  src={photo.src}
+                  alt={photo.label}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300 flex items-end">
+                  <div className="w-full px-3 py-2.5 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <p className="text-white text-xs font-semibold truncate">{photo.label}</p>
+                    <p className="flex items-center gap-1 text-[#ffb055] text-xs mt-0.5">
+                      <MapPin size={10} />
+                      {photo.location}
+                    </p>
+                  </div>
+                </div>
+                <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="bg-white/20 backdrop-blur-sm rounded-full p-1.5">
+                    <ZoomIn size={14} className="text-white" />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {selectedPhoto && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedPhoto(null)}
+            className="fixed inset-0 bg-black/85 z-50 flex items-center justify-center p-4"
+          >
+            <motion.div
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.85, opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative max-w-3xl w-full rounded-2xl overflow-hidden shadow-2xl"
+            >
+              <img
+                src={selectedPhoto.src}
+                alt={selectedPhoto.label}
+                className="w-full object-cover max-h-[80vh]"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-5">
+                <p className="text-white font-semibold text-base">{selectedPhoto.label}</p>
+                <p className="flex items-center gap-1.5 text-[#ffb055] text-sm mt-1">
+                  <MapPin size={13} />
+                  {selectedPhoto.location}
+                </p>
+              </div>
+              <button
+                onClick={() => setSelectedPhoto(null)}
+                className="absolute top-3 right-3 bg-white/20 hover:bg-white/40 text-white rounded-full p-2 transition"
+              >
+                <X size={20} />
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* What We Handle */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-14"
+          >
+            <div>
+              <p className="text-[#FF7900] font-semibold tracking-widest text-sm uppercase mb-2">Scope of Work</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+                What We Manage
+              </h2>
+              <p className="text-gray-500 text-sm mt-3 max-w-xl mx-auto">
+                From groundwork to final keys — every stage owned, managed, and delivered by us.
+              </p>
+            </div>
+          </motion.div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-px bg-gray-100">
             {[
-              "Site Inspection & Feasibility",
+              "Site Inspection",
               "Architectural Planning",
               "Government Approvals",
               "NA & Legal Clearances",
-              "Demolition & Site Clearing",
+              "Demolition & Clearing",
               "Construction & Civil Work",
               "Utility Connections",
               "Society Coordination",
-              "Transit Support for Residents",
-              "Quality Checks & Compliance",
-              "Documentation & Registration",
+              "Transit Support",
+              "Quality & Compliance",
+              "Documentation",
               "Final Handover",
             ].map((title, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="group flex items-center gap-5 border-b border-gray-200 py-5 hover:border-[#FF7900] transition-colors duration-300"
+                transition={{ duration: 0.3, delay: i * 0.04 }}
+                className="group bg-white hover:bg-[#FF7900] p-6 md:p-8 flex items-center justify-center transition-colors duration-300 cursor-default"
               >
-                <div className="w-9 h-9 rounded-full border-2 border-gray-200 group-hover:border-[#FF7900] group-hover:bg-[#FF7900] flex items-center justify-center transition-all duration-300 shrink-0">
-                  <span className="text-xs font-black text-gray-400 group-hover:text-white transition-colors duration-300">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                </div>
-                <span className="text-gray-700 group-hover:text-gray-900 font-semibold text-sm transition-colors duration-200">
+                <p className="text-gray-700 group-hover:text-white font-semibold text-sm text-center leading-snug transition-colors duration-300">
                   {title}
-                </span>
+                </p>
               </motion.div>
             ))}
           </div>
