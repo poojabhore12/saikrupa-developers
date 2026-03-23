@@ -7,7 +7,7 @@ const clients = [client1, client2, client3, client1, client2, client3]; // dupli
 
 export default function ClientsSection() {
   return (
-    <section className="pt-8 pb-20 bg-gray-50 overflow-hidden">
+    <section className="pt-8 pb-20 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 text-center mb-12">
         <motion.p
           initial={{ opacity: 0, y: 10 }}

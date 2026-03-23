@@ -1,27 +1,28 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ImageOff } from "lucide-react";
-import g1  from "../assets/gallery/g1.jpeg";
-import g2  from "../assets/gallery/g2.jpeg";
-import g3  from "../assets/gallery/g3.jpeg";
-import g4  from "../assets/gallery/g4.jpeg";
-import g5  from "../assets/gallery/g5.jpeg";
-import g6  from "../assets/gallery/g6.jpeg";
-import g7  from "../assets/gallery/g7.jpeg";
-import project1 from "../assets/project1.png";
-import project2 from "../assets/project2.png";
-import project3 from "../assets/project3.png";
-import project4 from "../assets/project4.png";
-import project5 from "../assets/project5.png";
-import project6 from "../assets/project6.png";
+import { ImageOff, ChevronLeft, ChevronRight } from "lucide-react";
+import g1 from "../assets/gallery/g4.jpeg";
+import g2 from "../assets/gallery/g5.jpeg";
+import g3 from "../assets/gallery/g6.jpeg";
+import g4 from "../assets/gallery/g7.jpeg";
+import site1 from "../assets/site_img/site1.jpeg";
+import site2 from "../assets/site_img/site2.jpeg";
+import site3 from "../assets/site_img/site3.jpeg";
+import site4 from "../assets/site_img/site4.jpeg";
+import site5 from "../assets/site_img/site5.jpeg";
+import site6 from "../assets/site_img/site6.jpeg";
+import site7 from "../assets/site_img/site7.jpeg";
+import site8 from "../assets/site_img/site8.jpeg";
 
 const projects = [
   {
     category: "Ongoing Projects",
     description: "Quality construction in progress across Pune.",
     items: [
-      { name: "Ongoing Project", src: g5 },
-      { name: "Ongoing Project", src: project2 },
+      { name: "Ongoing Project", src: site1 },
+      { name: "Ongoing Project", src: site2 },
+      { name: "Ongoing Project", src: site3 },
+      { name: "Ongoing Project", src: site4 },
     ],
   },
   {
@@ -32,18 +33,16 @@ const projects = [
       { name: "Completed Project", src: g2 },
       { name: "Completed Project", src: g3 },
       { name: "Completed Project", src: g4 },
-      { name: "Completed Project", src: g5 },
-      { name: "Completed Project", src: g6 },
     ],
   },
   {
     category: "Upcoming Projects",
     description: "Exciting new developments coming soon.",
     items: [
-      { name: "Upcoming Project", src: g7 },
-      { name: "Upcoming Project", src: project4 },
-      { name: "Upcoming Project", src: project5 },
-      { name: "Upcoming Project", src: project6 },
+      { name: "Upcoming Project", src: site5 },
+      { name: "Upcoming Project", src: site6 },
+      { name: "Upcoming Project", src: site7 },
+      { name: "Upcoming Project", src: site8 },
     ],
   },
 ];
@@ -72,6 +71,8 @@ function ProjectCard({ project, index }) {
   const [current, setCurrent] = useState(0);
   const total = project.items.length;
 
+  const prev = (e) => { e.stopPropagation(); setCurrent((c) => (c - 1 + total) % total); };
+  const next = (e) => { e.stopPropagation(); setCurrent((c) => (c + 1) % total); };
 
   return (
     <motion.div
@@ -101,14 +102,22 @@ function ProjectCard({ project, index }) {
         </AnimatePresence>
 
 
+        {/* Prev / Next arrows */}
+        <button onClick={prev} className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 transition">
+          <ChevronLeft size={16} />
+        </button>
+        <button onClick={next} className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 transition">
+          <ChevronRight size={16} />
+        </button>
+
         {/* Dots */}
-        {/* <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
           {project.items.map((_, i) => (
             <button key={i} onClick={() => setCurrent(i)}
               className={`h-2 rounded-full transition-all ${i === current ? "bg-[#ff9422] w-4" : "bg-white/60 w-2"}`}
             />
           ))}
-        </div> */}
+        </div> 
 
       </div>
 
