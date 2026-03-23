@@ -23,8 +23,8 @@ export default function Home() {
       <AwardsSection />
       <ClientsSection />
       <PartnershipSection />
-      <RedevelopmentTeaser />
       <FAQSection />
+      <RedevelopmentTeaser />
       <MapSection />
     </>
   );

@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import { Building2, ShieldCheck, Clock, Phone, Play } from "lucide-react";
-
-const VIDEO_LINK = "https://share.google/bW2Yt6GpKpUQn1kqE";
+import { Building2, ShieldCheck, Clock, Phone } from "lucide-react";
+import aboutVideo from "../assets/About_Us.mp4";
 
 const values = [
   {
@@ -43,32 +42,19 @@ export default function AboutSection() {
         <div className="grid md:grid-cols-2 gap-8 md:gap-14 items-center mb-12 md:mb-20">
 
           {/* Video */}
-          <motion.a
-            href={VIDEO_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+          <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
-            className="group relative rounded-2xl overflow-hidden shadow-2xl aspect-video bg-gradient-to-br from-gray-800 to-gray-900 block"
+            className="overflow-hidden shadow-2xl aspect-video bg-black"
           >
-            <div className="absolute inset-0 bg-[#FF7900]/5 group-hover:bg-[#FF7900]/10 transition-all duration-500" />
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                className="bg-[#FF7900] rounded-full p-5 shadow-2xl shadow-[#FF7900]/20/40 group-hover:shadow-[#FF7900]/20/60 transition-shadow"
-              >
-                <Play size={40} className="text-white fill-white ml-1" />
-              </motion.div>
-              <div className="text-center">
-                <p className="text-white font-bold text-lg">Watch Our Projects</p>
-                <p className="text-gray-400 text-sm mt-1">Click to open video</p>
-              </div>
-            </div>
-            <div className="absolute top-3 right-3 bg-[#FF7900] text-white text-xs font-bold px-3 py-1 rounded-full">
-              Video
-            </div>
-          </motion.a>
+            <video
+              src={aboutVideo}
+              controls
+              playsInline
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
 
           {/* Text */}
           <motion.div

@@ -20,6 +20,18 @@ import project4 from "../assets/project4.png";
 import project5 from "../assets/project5.png";
 import project6 from "../assets/project6.png";
 import heroImage from "../assets/gallery/g7.jpeg";
+import site1  from "../assets/site_img/site1.jpeg";
+import site2  from "../assets/site_img/site2.jpeg";
+import site3  from "../assets/site_img/site3.jpeg";
+import site4  from "../assets/site_img/site4.jpeg";
+import site5  from "../assets/site_img/site5.jpeg";
+import site6  from "../assets/site_img/site6.jpeg";
+import site7  from "../assets/site_img/site7.jpeg";
+import site8  from "../assets/site_img/site8.jpeg";
+import site9  from "../assets/site_img/site9.jpeg";
+import site10 from "../assets/site_img/site10.jpeg";
+import site21 from "../assets/site_img/site21.jpeg";
+import site22 from "../assets/site_img/site22.jpeg";
 
 const photos = [
   { src: g1,       label: "Site Overview",         location: "Pune" },
@@ -38,6 +50,18 @@ const photos = [
   { src: project4, label: "Custom Plot Sizes",      location: "Pune" },
   { src: project5, label: "Site Aerial View",       location: "Pune" },
   { src: project6, label: "Site Maintenance",       location: "Pune" },
+  { src: site1,    label: "Site Work",              location: "Pune" },
+  { src: site2,    label: "Site Work",              location: "Pune" },
+  { src: site3,    label: "Site Work",              location: "Pune" },
+  { src: site4,    label: "Site Work",              location: "Pune" },
+  { src: site5,    label: "Site Work",              location: "Pune" },
+  { src: site6,    label: "Site Work",              location: "Pune" },
+  { src: site7,    label: "Site Work",              location: "Pune" },
+  { src: site8,    label: "Site Work",              location: "Pune" },
+  { src: site9,    label: "Site Work",              location: "Pune" },
+  { src: site10,   label: "Site Work",              location: "Pune" },
+  { src: site21,   label: "Site Work",              location: "Pune" },
+  { src: site22,   label: "Site Work",              location: "Pune" },
 ];
 
 export default function Gallery() {

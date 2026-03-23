@@ -9,8 +9,8 @@ import prajakta from "../assets/prajakta.jpeg";
 
 const team = [
   { name: "Sudam Bhore",     role: "Founder & CEO",        image: ceo },
-  { name: "Vishal Bhore",    role: "Project Engineer",      image: vishal },
   { name: "Gulab Bhore",     role: "Site Coordinator",      image: gulab },
+  { name: "Vishal Bhore",    role: "Project Engineer",      image: vishal },
   { name: "Akash Shinde",    role: "Site Supervisor",       image: null },
   { name: "Jaganath Merage", role: "Office Administration", image: jaganath },
   { name: "Prajakta Salunkhe", role: "Accountant",          image: prajakta },
