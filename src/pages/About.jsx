@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroImage from "../assets/project5.png";
+import heroImage from "../assets/gallery/g5.jpeg";
 import AboutSection from "../components/AboutSection";
 import VisionMissionSection from "../components/VisionMissionSection";
 import GallerySection from "../components/GallerySection";

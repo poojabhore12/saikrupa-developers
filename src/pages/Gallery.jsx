@@ -32,6 +32,19 @@ import site9  from "../assets/site_img/site9.jpeg";
 import site10 from "../assets/site_img/site10.jpeg";
 import site21 from "../assets/site_img/site21.jpeg";
 import site22 from "../assets/site_img/site22.jpeg";
+import p2  from "../assets/projects_img/p2.jpeg";
+import p3  from "../assets/projects_img/p3.jpeg";
+import p4  from "../assets/projects_img/p4.jpeg";
+import p5  from "../assets/projects_img/p5.jpeg";
+import p6  from "../assets/projects_img/p6.jpeg";
+import p7  from "../assets/projects_img/p7.jpeg";
+import p8  from "../assets/projects_img/p8.jpeg";
+import p9  from "../assets/projects_img/p9.jpeg";
+import p10 from "../assets/projects_img/p10.jpeg";
+import p11 from "../assets/projects_img/p11.jpeg";
+import p12 from "../assets/projects_img/p12.jpeg";
+import p13 from "../assets/projects_img/p13.jpeg";
+import p14 from "../assets/projects_img/p14.jpeg";
 
 const photos = [
   { src: g1,       label: "Site Overview",         location: "Pune" },
@@ -50,7 +63,6 @@ const photos = [
   { src: project4, label: "Custom Plot Sizes",      location: "Pune" },
   { src: project5, label: "Site Aerial View",       location: "Pune" },
   { src: project6, label: "Site Maintenance",       location: "Pune" },
-  { src: site1,    label: "Site Work",              location: "Pune" },
   { src: site2,    label: "Site Work",              location: "Pune" },
   { src: site3,    label: "Site Work",              location: "Pune" },
   { src: site4,    label: "Site Work",              location: "Pune" },
@@ -62,6 +74,19 @@ const photos = [
   { src: site10,   label: "Site Work",              location: "Pune" },
   { src: site21,   label: "Site Work",              location: "Pune" },
   { src: site22,   label: "Site Work",              location: "Pune" },
+  { src: p2,       label: "Project Site",           location: "Pune" },
+  { src: p3,       label: "Project Site",           location: "Pune" },
+  { src: p4,       label: "Project Site",           location: "Pune" },
+  { src: p5,       label: "Project Site",           location: "Pune" },
+  { src: p6,       label: "Project Site",           location: "Pune" },
+  { src: p7,       label: "Project Site",           location: "Pune" },
+  { src: p8,       label: "Project Site",           location: "Pune" },
+  { src: p9,       label: "Project Site",           location: "Pune" },
+  { src: p10,      label: "Project Site",           location: "Pune" },
+  { src: p11,      label: "Project Site",           location: "Pune" },
+  { src: p12,      label: "Project Site",           location: "Pune" },
+  { src: p13,      label: "Project Site",           location: "Pune" },
+  { src: p14,      label: "Project Site",           location: "Pune" },
 ];
 
 export default function Gallery() {

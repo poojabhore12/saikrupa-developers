@@ -4,19 +4,19 @@ import { X, ZoomIn, MapPin, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import gallery1 from "../assets/gallery/gallery1.jpeg";
-import gallery2 from "../assets/gallery/gallery2.jpeg";
+import gallery2 from "../assets/gallery/g7.jpeg";
 import g3 from "../assets/gallery/g3.jpeg";
 import g4 from "../assets/gallery/g4.jpeg";
 import g9 from "../assets/gallery/g9.jpeg";
 import g10 from "../assets/gallery/g10.jpeg";
 
 const photos = [
-  { src: gallery1, label: "Site Overview",      location: "Pune" },
-  { src: gallery2, label: "Plot Layout",         location: "Pune" },
-  { src: g3,       label: "Road Infrastructure", location: "Pune" },
   { src: g4,       label: "Industrial Zone",     location: "Pune" },
+  { src: gallery1, label: "Site Overview",      location: "Pune" },   
   { src: g9,       label: "Site Development",    location: "Pune" },
   { src: g10,      label: "Boundary & Gating",   location: "Pune" },
+  { src: g3,       label: "Road Infrastructure", location: "Pune" },
+  { src: gallery2, label: "Plot Layout",         location: "Pune" }, 
 ];
 
 export default function GallerySection() {
