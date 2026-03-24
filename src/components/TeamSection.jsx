@@ -13,7 +13,7 @@ const team = [
   { name: "Vishal Bhore",    role: "Project Engineer",      image: vishal },
   { name: "Akash Shinde",    role: "Site Supervisor",       image: null },
   { name: "Jaganath Merage", role: "Office Administration", image: jaganath },
-  { name: "Prajakta Salunkhe", role: "Accountant",          image: prajakta },
+  { name: "Prajakta Bobade", role: "Accountant",          image: prajakta },
 ];
 
 function MemberCard({ member }) {
