@@ -30,6 +30,7 @@ import site7  from "../assets/site_img/site7.jpeg";
 import site8  from "../assets/site_img/site8.jpeg";
 import site9  from "../assets/site_img/site9.jpeg";
 import site10 from "../assets/site_img/site10.jpeg";
+import site11 from "../assets/site_img/site11.jpeg";
 import site21 from "../assets/site_img/site21.jpeg";
 import site22 from "../assets/site_img/site22.jpeg";
 import p2  from "../assets/projects_img/p2.jpeg";
@@ -54,11 +55,11 @@ const photos = [
   { src: g5,       label: "Site Development",       location: "Pune" },
   { src: g6,       label: "Boundary & Gating",      location: "Pune" },
   { src: g7,       label: "Project Inauguration",   location: "Pune" },
-  { src: gallery1, label: "Completed Site",         location: "Pune" },
+  { src: site1,     label: "Completed Site",         location: "Pune" },
   { src: g9,       label: "Site Infrastructure",    location: "Pune" },
   { src: g10,      label: "Development Work",       location: "Pune" },
   { src: project1, label: "Industrial Plots",       location: "Pune" },
-  { src: gallery2, label: "Residential Plots",      location: "Pune" },
+  { src: site11,    label: "Residential Plots",      location: "Pune" },
   { src: project3, label: "NA Approved Plots",      location: "Pune" },
   { src: project4, label: "Custom Plot Sizes",      location: "Pune" },
   { src: project5, label: "Site Aerial View",       location: "Pune" },
