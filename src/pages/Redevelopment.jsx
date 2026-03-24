@@ -17,6 +17,12 @@ import site16 from "../assets/site_img/site16.jpeg";
 import site17 from "../assets/site_img/site17.jpeg";
 import site18 from "../assets/site_img/site18.jpeg";
 import site19 from "../assets/site_img/site19.jpeg";
+import p2  from "../assets/projects_img/p2.jpeg";
+import p3  from "../assets/projects_img/p3.jpeg";
+import p4  from "../assets/projects_img/p4.jpeg";
+import p5  from "../assets/projects_img/p5.jpeg";
+import p6  from "../assets/projects_img/p6.jpeg";
+import p9  from "../assets/projects_img/p9.jpeg";
 
 const sitePhotos = [
   { src: site11, label: "Redevelopment Site", location: "Pune" },
@@ -28,6 +34,12 @@ const sitePhotos = [
   { src: site17, label: "Redevelopment Site", location: "Pune" },
   { src: site18, label: "Redevelopment Site", location: "Pune" },
   { src: site19, label: "Redevelopment Site", location: "Pune" },
+  { src: p2,     label: "Project Site",       location: "Pune" },
+  { src: p3,     label: "Project Site",       location: "Pune" },
+  { src: p4,     label: "Project Site",       location: "Pune" },
+  { src: p5,     label: "Project Site",       location: "Pune" },
+  { src: p6,     label: "Project Site",       location: "Pune" },
+  { src: p9,     label: "Project Site",       location: "Pune" },
 ];
 
 const benefits = [
