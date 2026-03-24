@@ -4,7 +4,7 @@ import { User } from "lucide-react";
 import ceo from "../assets/ceo.webp";
 import gulab from "../assets/gulab.png";
 import vishal from "../assets/vishal.webp";
-import jaganath from "../assets/jaganath.jpeg";
+import jaganath from "../assets/jaganath.png";
 import prajakta from "../assets/prajakta.jpeg";
 
 const team = [
