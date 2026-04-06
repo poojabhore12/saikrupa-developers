@@ -64,7 +64,7 @@ export default function Contact() {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="text-[#FF7900] shrink-0" />
-                <p className="text-gray-700">sudambhore@gmail.com</p>
+                <p className="text-gray-700">info.saikrupadevelopers@gmail.com</p>
               </div>
             </div>
 
